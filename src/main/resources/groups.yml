@@ -1,0 +1,13 @@
+# Default group. DO NOT DELETE
+default:
+  # true = player must teleport to the login location when login to the server.
+  # false = player can disable the teleportation.
+  lock: true
+  # The players who choose not to teleport to the login loc.
+  ignoreList: []
+  # Set it in the game. Use /lll set default .
+  location: []
+
+# Example group. Permission: loginlocationlock.group.example
+example:
+  location: []
