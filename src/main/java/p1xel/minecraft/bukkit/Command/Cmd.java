@@ -23,6 +23,18 @@ public class Cmd implements CommandExecutor {
 
         if (args.length == 1) {
 
+            if (args[0].equalsIgnoreCase("help")) {
+                if (!sender.hasPermission("loginlocationlock.help")) {
+                    sender.sendMessage("no perm!");
+                    return true;
+                }
+                sender.sendMessage("/LoginLocationLock tp [group] Teleport to [group]'s login location.");
+                sender.sendMessage("/LoginLocationLock set [group] Set [group]'s login location.");
+                sender.sendMessage("/LoginLocationLock usetp Toggle default login location teleportation.");
+                sender.sendMessage("/LoginLocationLock reload Reload the configuration.");
+                return true;
+            }
+
             if (args[0].equalsIgnoreCase("reload")) {
                 if (!sender.hasPermission("loginlocationback.reload")) {
                     sender.sendMessage("No perm!");
@@ -50,12 +62,12 @@ public class Cmd implements CommandExecutor {
                 if (LLLGroupManager.getDefualtGroupIgnoreList().contains(uuid)) {
 
                     LLLGroupManager.removeUUIDFromIgnoreList(uuid);
-                    sender.sendMessage("You disable login teleportation.");
+                    sender.sendMessage("You enabled login teleportation.");
                     return true;
 
                 } else {
                     LLLGroupManager.addUUIDToIgnoreList(uuid);
-                    sender.sendMessage("You enable login teleportation.");
+                    sender.sendMessage("You disabled login teleportation.");
                     return true;
                 }
             }

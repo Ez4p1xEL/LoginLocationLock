@@ -53,7 +53,7 @@ public class LLLGroupManager {
     }
 
     public static Location getGroupLocation(String group) {
-        return get().getLocation(group + ".location");
+        return (Location) get().get(group + ".location");
     }
 
     public static List<String> getDefualtGroupIgnoreList() {
@@ -61,7 +61,7 @@ public class LLLGroupManager {
     }
 
     public static boolean isGroupLocationSet(String group) {
-        return get().getLocation(group + ".location") != null;
+        return  get().get(group + ".location") != null;
     }
 
     public static void setGroupLocLock(String group, boolean bool) {

@@ -1,9 +1,12 @@
 name: LoginLocationLock
 main: p1xel.minecraft.bukkit.LoginLocationLock
-version: 1.0.00-pre8
+version: 1.0.00
 api-version: 1.13
 commands:
   LoginLocationLock:
     aliases:
       - 'llock'
       - 'lll'
+permissions:
+  loginlocationlock.usetp:
+    default: op

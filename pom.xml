@@ -6,7 +6,7 @@
 
     <groupId>p1xel.minecraft.bukkit</groupId>
     <artifactId>LoginLocationLock</artifactId>
-    <version>1.0.00-pre8</version>
+    <version>1.0.00</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
